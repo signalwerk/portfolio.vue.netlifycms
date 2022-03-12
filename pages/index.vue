@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="page--home">
     <h1>Portfolio</h1>
-    <ul>
-      <li v-for="post of posts" :key="post.slug">
-        <NuxtLink :to="`./portfolio/${post.slug}`"
-          >Post {{ post.title }}</NuxtLink
+    <ul class="home__projects">
+      <li class="home__project" v-for="post of posts" :key="post.slug">
+        <NuxtLink :to="`./portfolio/${post.slug}`">
+          <img class="home__project-preview" :src="post.preview" />
+          Post {{ post.title }}</NuxtLink
         >
       </li>
     </ul>
@@ -24,3 +25,6 @@ export default {
   },
 };
 </script>
+
+<style>
+</style>
