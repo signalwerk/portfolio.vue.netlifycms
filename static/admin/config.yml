@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
+  repo: signalwerk/portfolio.vue.netlifycms # Path to your GitHub repository
 
 media_folder: static/img
 public_folder: /img
@@ -19,9 +20,4 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          required: true,
-        }
+      - { label: "Image", name: "image", widget: "image", required: true }
