@@ -2,7 +2,7 @@
 title: Hello
 date: 2022-03-12T10:15:30.058Z
 description: Test
-image: /img/microsoft-365-bx6sdyw48s-unsplash.jpg
+preview: /img/microsoft-365-bx6sdyw48s-unsplash.jpg
 ---
 # Hallo Welt
 

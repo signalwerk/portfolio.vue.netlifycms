@@ -12,12 +12,29 @@ collections:
     folder: "content/portfolio"
     format: "frontmatter"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{title}}"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Image", name: "image", widget: "image", required: true }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          required: false,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Preview", name: "preview", widget: "image", required: false }
+      - label: "Gallery"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.image}}"
+        field:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Image", name: "image", widget: "image", required: true }
