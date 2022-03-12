@@ -31,10 +31,10 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Preview", name: "preview", widget: "image", required: false }
-      - label: "Gallery"
+      - label: "Images"
         name: "images"
         widget: "list"
-        summary: "{{fields.image}}"
-        field:
+        summary: "{{fields.title}}"
+        fields:
           - { label: "Title", name: "title", widget: "string", required: true }
           - { label: "Image", name: "image", widget: "image", required: true }
